@@ -50,7 +50,7 @@ function perimetroCirculo(radio) {
   const diametro = diametroCirculo(radio); // llamamos una funcion dentro de otra funcion
   return diametro * Pi;
 }
-// / / Area
+// / / Area Circulo
 function areaCirculo(radio){
     return (radio * radio) * Pi
 }
