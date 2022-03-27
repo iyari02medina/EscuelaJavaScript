@@ -29,7 +29,7 @@ function areaTriangulo(base, altura) {
 }
 console.groupEnd();
 
-// / / / / / / CODIGO DEL TRIANGULO / / / / / /
+// / / / / / / CODIGO DEL CIRCULO / / / / / /
 
 console.group("Circulos");
 
@@ -51,14 +51,17 @@ function perimetroCirculo(radio) {
   return diametro * Pi;
 }
 // / / Area Circulo
-function areaCirculo(radio){
-    return (radio * radio) * Pi
+function areaCirculo(radio) {
+  return radio * radio * Pi;
 }
 console.groupEnd();
 
 // / / / / / / / / / / Aqui interactuamos con el HTML // / / / / / / / / / /
+
+// / / / / / Cuadrado
+
 /* "document.getElemetById()" */
-function calcularPerimetroCuadrado(){
+function calcularPerimetroCuadrado() {
   const input = document.getElementById("InputCuadrado");
   const value = input.value;
 
@@ -74,3 +77,47 @@ function calcularAreaCuadrado() {
   alert(area);
 }
 
+// / / / / / Triangulo
+
+function calcularPerimetroTriangulo() {
+  const input = document.getElementById("InputLado1Triangulo");
+  const lado1 = Number(input.value);
+
+  const input2 = document.getElementById("InputLado2Triangulo");
+  const lado2 = Number(input2.value);
+
+  const input3 = document.getElementById("InputBaseTriangulo");
+  const base = Number(input3.value);
+
+  const perimetro = perimetroTriangulo(lado1, lado2, base);
+  alert(perimetro);
+}
+
+function calcularAreaTriangulo() {
+  const input3 = document.getElementById("InputBaseTriangulo");
+  const base = Number(input3.value);
+
+  const input4 = document.getElementById("InputAlturaTriangulo");
+  const altura = Number(input4.value);
+
+  const area = areaTriangulo(base, altura);
+  alert(area);
+}
+
+// / / / / / Circulo
+
+function calcularCircunferenciaCirculo(){
+  const input = document.getElementById("InputCirculo");
+  const radio = input.value;
+
+  const circunferencia = perimetroCirculo(radio);
+  alert(circunferencia);
+}
+
+function calcularAreaCirculo(){
+  const input = document.getElementById("InputCirculo");
+  const radio = input.value;
+
+  const area = areaCirculo(radio);
+  alert(area);
+}
