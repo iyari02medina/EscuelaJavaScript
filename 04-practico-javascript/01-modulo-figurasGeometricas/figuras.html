@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figuras Geometricas | Curso practico de JavaScript en Platzi</title>
+    <link rel="stylesheet" href="./css.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Figuras Geometricas</h1>
+      <p>Este es el primer taller del curso practico de JavaScript</p>
+    </header>
+
+    <main>
+      <section class="grid-container">
+        <div class="grid-card">
+          <figure>
+            <img
+              src="https://t4.ftcdn.net/jpg/03/54/80/85/240_F_354808595_2yQlgAAuUV3wHDEQFjSsRaoacpxSOk8G.jpg"
+              alt="cuadrados"
+            />
+          </figure>
+          <h2>Calcula el área y perimetro de un cuadrado</h2>
+          <div class="contenedor-separador">
+            <img
+              src="https://assets.nymag.com/media/sites/vulture/squiggle-hr.svg"
+              alt="separador"
+            />
+          </div>
+          <div class="form-container">
+            <p>Escribe cuanto mide cada lado de tu cuadrado:</p>
+            <form action="">
+              <label for="InputCuadrado"></label>
+              <input id="InputCuadrado" type="number" />
+              <button type="button" onclick="calcularPerimetroCuadrado()">
+                <!-- "onclick" conenta nuestro html con una funcion en javascript -->
+                Calcular el perimetro
+              </button>
+              <button type="button" onclick="calcularAreaCuadrado()">
+                Calcular el area
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="grid-card">
+          <figure>
+            <img
+              src="https://img.freepik.com/foto-gratis/bolas-billar-blancas-billar-ruso-triangulo-mesa-vista-arriba-bolas-billar_345343-806.jpg?size=626&ext=jpg&ga=GA1.2.1675383163.1633988198"
+              alt="cuadrados"
+            />
+          </figure>
+          <h2>Calcula el área y perimetro de <br>un triangulo</h2>
+          <div class="contenedor-separador">
+            <img
+              src="https://assets.nymag.com/media/sites/vulture/squiggle-hr.svg"
+              alt="separador"
+            />
+          </div>
+          <div class="form-container">
+            <p>Escribe lo siguiente: </p>
+            <form action="" class="form-triangulo">
+              <label for="InputLado1Triangulo">Lado 1:</label>
+              <input id="InputLado1Triangulo" type="number" />
+              <label for="InputLado2Triangulo">Lado 2:</label>
+              <input id="InputLado2Triangulo" type="number" />
+              <label for="InputBaseTriangulo">Base:</label>
+              <input id="InputBaseTriangulo" type="number" />
+              <label for="InputAlturaTriangulo">Altura:</label>
+              <input id="InputAlturaTriangulo" type="number" />
+              <button type="button" onclick="calcularPerimetroTriangulo()">
+                <!-- "onclick" conenta nuestro html con una funcion en javascript -->
+                Calcular el perimetro
+              </button>
+              <button type="button" onclick="calcularAreaTriangulo()">
+                Calcular el area
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="grid-card">
+          <figure>
+            <img
+              src="https://logodownload.org/wp-content/uploads/2020/03/olimpiada-olympic-games-logo.png"
+              alt="cuadrados"
+            />
+          </figure>
+          <h2>Calcula el área y circunferencia de un circulo</h2>
+          <div class="contenedor-separador">
+            <img
+              src="https://assets.nymag.com/media/sites/vulture/squiggle-hr.svg"
+              alt="separador"
+            />
+          </div>
+          <div class="form-container">
+            <p>Escribe el radio del circulo:</p>
+            <form action="">
+              <label for="InputCirculo"></label>
+              <input id="InputCirculo" type="number" />
+              <button type="button" onclick="calcularCircunferenciaCirculo()">
+                <!-- "onclick" conenta nuestro html con una funcion en javascript -->
+                Calcular circunferencia
+              </button>
+              <button type="button" onclick="calcularAreaCirculo()">
+                Calcular el area
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./figuras.js"></script>
+    <!-- asi se integra javascript en html -->
+  </body>
+</html>
