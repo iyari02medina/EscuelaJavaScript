@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Porcentajes y Descuentos</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+    </style>
   </head>
   <body>
     <header>
@@ -12,31 +16,48 @@
       <p>Este es el segundo taller del curso Practico de Javascript</p>
     </header>
 
-    <section>
-      <h2>Calcula el precio a pagar de tus productos con descuentos</h2>
+    <main>
+      <div class="card-container">
+        <figure class="img-container">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1255/1255233.png"
+            alt=""
+          />
+        </figure>
+        <h2>Calcula el precio a pagar de tus productos con descuentos</h2>
 
-      <form action="">
-        <label for="InputPrice">Escribe el precio de tu producto: </label>
-        <input id="InputPrice" type="number" />
-        <label for="InputDiscount">Escribe el descuento de tu producto</label>
-        <input id="InputDiscount" type="number" />
-        <button type="button" onclick="onClickButtonPriceDiscount()">
-          Calcular el precio con descuento
-        </button>
+        <form action="">
+          <label for="InputPrice">Escribe el precio de tu producto: </label>
+          <input id="InputPrice" type="number" />
+          <label for="InputDiscount">Escribe el descuento de tu producto</label>
+          <input id="InputDiscount" type="number" />
+          <button type="button" onclick="onClickButtonPriceDiscount()">
+            Calcular el precio con descuento
+          </button>
 
-        <p id="ResultP"></p>
-      </form>
-      <form action="">
-        <label for="InputCupon"
-          >Escribe el cupon de descuento para tu producto:</label
-        >
-        <input type="text" id="InputCupon" />
-        <button type="button" onclick="onClickButtonPriceDiscountCoupon()">
-          Culcula el descunto adicional
-        </button>
-        <p id="ResultCoupon"></p>
-      </form>
-    </section>
+          <p id="ResultP"></p>
+        </form>
+      </div>
+      <div class="card-container">
+        <figure class="img-container">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1255/1255226.png"
+            alt=""
+          />
+        </figure>
+        <h2>Cupon de descuento</h2>
+        <form action="">
+          <label for="InputCupon"
+            >Escribe el cupon de descuento para tu producto:</label
+          >
+          <input type="text" id="InputCupon" />
+          <button type="button" onclick="onClickButtonPriceDiscountCoupon()">
+            Culcula el descunto adicional
+          </button>
+          <p id="ResultCoupon"></p>
+        </form>
+      </div>
+    </main>
 
     <script src="./descuentos.js"></script>
   </body>
