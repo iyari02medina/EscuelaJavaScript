@@ -4,6 +4,39 @@ function calcularPrecioConDescuento(precio, descuento) {
 
   return precioConDescuento;
 }
+function onClickButtonPriceDiscountCoupon (){
+    const inputPrice = document.getElementById("InputPrice");
+    const priceValue = inputPrice.value;
+
+    const inputDiscount = document.getElementById("InputDiscount");
+    const discountValue = inputDiscount.value;
+
+    const inputCoupon = document.getElementById("InputCupon");
+    const couponValue = inputCoupon.value;
+
+    const precioConDescuento = calcularPrecioConDescuento(
+      priceValue,
+      discountValue
+    );
+
+    const isCouponValueValid = function (coupon) {
+      return coupon.name === couponValue;
+    };
+    const userCoupon = coupons.find(isCouponValueValid);
+
+    if (!userCoupon) {
+      alert("El cupon " + userCoupon + " no es valido");
+    } else {
+      const descuento = userCoupon.discount;
+      const precioDescuento = calcularPrecioConDescuento(
+        precioConDescuento,
+        descuento
+      );
+
+      const resultP = document.getElementById("ResultCoupon");
+      resultP.innerText = "El precio con descuento son: $ " + precioDescuento;
+    }
+}
 
 function onClickButtonPriceDiscount() {
   const inputPrice = document.getElementById("InputPrice");
@@ -12,8 +45,8 @@ function onClickButtonPriceDiscount() {
   const inputDiscount = document.getElementById("InputDiscount");
   const discountValue = inputDiscount.value;
 
-  const inputCoupon = document.getElementById("InputCupon");
-  const couponValue = inputCoupon.value;
+  /* const inputCoupon = document.getElementById("InputCupon");
+  const couponValue = inputCoupon.value; */
 
   const precioConDescuento = calcularPrecioConDescuento(
     priceValue,
@@ -22,20 +55,20 @@ function onClickButtonPriceDiscount() {
   const resultP = document.getElementById("ResultP");
   resultP.innerText = "El precio con descuento son: $" + precioConDescuento;
 
-  const isCouponValueValid = function (coupon) {
+  /* const isCouponValueValid = function (coupon) {
     return coupon.name === couponValue;
   };
   const userCoupon = coupons.find(isCouponValueValid);
 
   if (!userCoupon) {
-    alert("El cupon " + userCouponValue + " no es valido");
+    alert("El cupon " + userCoupon + " no es valido");
   } else {
     const descuento = userCoupon.discount;
-    const precioDescuento = calcularPrecioConDescuento(priceValue, descuento);
+    const precioDescuento = calcularPrecioConDescuento(precioConDescuento, descuento);
 
-    const resultP = document.getElementById("ResultP");
+    const resultP = document.getElementById("ResultCoupon");
     resultP.innerText = "El precio con descuento son: $ " + precioDescuento;
-  }
+  } */
 }
 
 // / / / / / / / / / / / / Cupones de descuento / / / / / / / / / / / /
@@ -55,18 +88,4 @@ const coupons = [
   },
 ];
 
-/* const isCouponValueValid = function(coupon){
-    return coupon.name === couponValue;
-}
-const userCoupon = coupons.find(isCouponValueValid);
 
-if (!userCoupon){
-    alert("El cupon " + userCouponValue + " no es valido");
-} else {
-    const descuento = userCoupon.discount;
-    const precioDescuento = calcularPrecioConDescuento(priceValue, descuento);
-
-    const resultP = document.getElementById("ResultP");
-    resultP.innerText = "El precio con descuento son: $ " + precioDescuento;
-}
- */
